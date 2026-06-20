@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: #1b1221;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 215, 238, 0.7), transparent 26%),
+    radial-gradient(circle at 85% 18%, rgba(214, 188, 250, 0.55), transparent 24%),
+    linear-gradient(135deg, #fff8fb 0%, #f7eef7 45%, #efe7ff 100%);
+}
+::selection { background: #f9a8d4; color: #111; }
+
+.paper {
+  background: rgba(255, 252, 247, 0.9);
+  background-image: linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px);
+  background-size: 100% 28px;
+}
+
+.tape::before,
+.tape::after {
+  content: "";
+  position: absolute;
+  width: 82px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transform: rotate(-8deg);
+}
+.tape::before { top: -12px; left: 24px; }
+.tape::after { bottom: -12px; right: 24px; transform: rotate(7deg); }
+
+.chrome {
+  color: transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #e9d5ff 25%, #c4b5fd 48%, #f0abfc 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px rgba(79, 30, 99, 0.5);
+  text-shadow: 0 5px 0 rgba(255,255,255,.7), 0 14px 30px rgba(126,34,206,.25);
+}
+
+.mag-photo {
+  background: linear-gradient(135deg, #fce7f3, #ede9fe, #ffffff);
+  border: 10px solid white;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+}
+
+.sticker {
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 3px 5px 0 rgba(0,0,0,0.12);
+}
